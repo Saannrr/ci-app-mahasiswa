@@ -4,8 +4,9 @@ class About extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('templates/header');
-        $this->load->view('about/index');
+        $data['judul'] = 'Tentang Website';
+        $this->load->view('templates/header', $data);
+        $this->load->view('about/index', $data);
         $this->load->view('templates/footer');
     }
 }
