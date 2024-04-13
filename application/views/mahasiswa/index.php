@@ -12,6 +12,18 @@
         </div>
     <?php endif; ?>
     <div class="row mt-3">
+        <div class="col-md-6">
+            <form action="<?= base_url(); ?>mahasiswa" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cari mahasiswa..." name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
         <div class="col-md-12">
             <h3 class="text-center mb-3">Daftar Mahasiswa</h3>
             <div class="table-responsive">
@@ -23,6 +35,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php if (empty($mahasiswa)) : ?>
+                            <tr>
+                                <td colspan="2" class="text-center">Data mahasiswa tidak ditemukan.</td>
+                            </tr>
+                        <?php endif; ?>
                         <?php foreach ($mahasiswa as $mhs) : ?>
                             <tr>
                                 <td><?= $mhs['nama']; ?></td>
