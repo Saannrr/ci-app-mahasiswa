@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row mt-3">
-        <div class="col-md-6">
+    <div class="row mt-3 justify-content-center">
+        <div class="col-md-6 text-center">
             <h2>Detail Mahasiswa</h2>
             <div class="card">
                 <div class="card-header">
